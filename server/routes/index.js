@@ -2,6 +2,7 @@
 
 import express from "express";
 import userRouter from "./user";
+import postRouter from "./post";
 
 const router = express.Router();
 
@@ -14,6 +15,7 @@ router.get("/", (req, res) => {
 });
 
 router.use("/api/v1/users", userRouter);
+router.use("/api/v1/posts", postRouter);
 
 // error handeling
 router.use("*", (req, res, next) => {

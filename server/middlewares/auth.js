@@ -12,10 +12,11 @@ const auth = async (req, res, next) => {
     req.token = token;
     req.user = user;
     next();
-  } catch (error) {
+  } catch (err) {
     res.status(401).send({
       isAuth: false,
       error: true,
+      message: err,
     });
   }
 };
