@@ -1,4 +1,4 @@
-'use strict'
-import connectDB from './mongodb'
+"use strict";
+import connectDB from "./mongodb";
 
-export { connectDB }
+export { connectDB };

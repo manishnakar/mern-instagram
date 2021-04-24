@@ -1,19 +1,17 @@
-'use strict'
+"use strict";
 
-import express from 'express';
-import user_controller from '../controllers/user'
-import auth from '../middlewares/auth'
+import express from "express";
+import user_controller from "../controllers/user";
+import auth from "../middlewares/auth";
 
 const userRouter = express.Router();
 
-userRouter.get('/',auth, user_controller.index)
+userRouter.get("/", auth, user_controller.index);
 
-userRouter.post('/', user_controller.create)
+userRouter.post("/", user_controller.create);
 
-userRouter.post('/login', user_controller.login)
+userRouter.post("/login", user_controller.login);
 
-userRouter.get('/logout', auth, user_controller.logout)
+userRouter.get("/logout", auth, user_controller.logout);
 
-
-
-export default userRouter
+export default userRouter;
