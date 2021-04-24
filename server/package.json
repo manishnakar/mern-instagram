@@ -7,6 +7,7 @@
     "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
     "start": "npm run build && node -r dotenv/config dist/index.js",
     "dev": "nodemon --exec babel-node -r dotenv/config index.js",
+    "format": "prettier --write .",
     "clean": "rimraf dist"
   },
   "author": "",
@@ -27,6 +28,7 @@
     "@babel/node": "^7.13.13",
     "@babel/preset-env": "^7.13.15",
     "nodemon": "^2.0.7",
+    "prettier": "2.2.1",
     "rimraf": "^3.0.2"
   }
 }
