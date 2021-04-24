@@ -1,6 +1,7 @@
 'use strict'
 
 import express from 'express'
+import userRouter from './user'
 
 const router = express.Router()
 
@@ -12,6 +13,7 @@ router.get('/', (req, res) => {
   res.send('ok')
 })
 
+router.use('/api/v1/users', userRouter);
 
 // error handeling
 router.use('*', (req, res, next) => {
